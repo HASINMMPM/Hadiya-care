@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@theme {
+    --color-dmeroon: #772e25; 
+    --color-meroon: #c44536;
+    --color-blue: #197278;
+    --color-dblue: #283d3b;
+    --color-bg: #F3E9E3;
+  }
+
+.section{
+    @apply max-w-screen-2xl mx-auto p-3 bg-red-600
+}   
