@@ -1,16 +1,25 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Lustria&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
 @theme {
-    --color-dmeroon: #772e25; 
-    --color-meroon: #c44536;
-    --color-blue: #197278;
-    --color-dblue: #283d3b;
-    --color-bg: #D6D7D4;
-  }
+  --color-dgreen: #308743;
+  --color-green: #45A14E;
+  --color-blue: #179DA0;
+  --color-dblue: #1784A3;
+  --color-bg: #d6d7d4;
+
+  --font-head: "Lustria", serif;
+  --font-body: "Nunito Sans", sans-serif;
+  --font-sub-heading: "Lustria", serif;
+}
+
+.section {
+  @apply max-w-screen-2xl mx-auto px-4 lg:px-6 py-24 ;
+}
 
 
 
-
-  
-.section{
-    @apply max-w-screen-2xl mx-auto p-3 bg-red-600
-}   
+body{
+  font-family: var(--font-body);
+}

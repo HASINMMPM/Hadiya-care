@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import logo from "/logo.webp";
+import logo from "/logo.jpeg";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header>
-      <nav className="bg-bg border-gray-200 px-4 lg:px-6 py-2.5">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+    <header className="max-w-screen-2xl mx-auto px-4 lg:px-6 py-2.5 " >
+      <nav className=" border-gray-200  ">
+        <div className="flex flex-wrap justify-between items-center">
           <a href="#" className="flex items-center ">
-            <img src={logo} className="mr-3 h-16" alt="Hilaas Logo" />
+            <img src={logo} className=" h-16" alt="Hilaas Logo" />
             <div className="flex flex-col">
               <span className="text-2xl font-semibold text-dblue">HILAAS</span>
               <span className="text-xl font-semibold text-blue">
@@ -55,7 +55,7 @@ export default function Header() {
             <div className="flex justify-between w-full lg:w-auto mt-5 lg:mt-0">
               <a
                 href="tel://+918139055749"
-                className="text-bg hover:bg-dblue bg-blue focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none duration-300"
+                className="text-white hover:bg-dblue bg-blue focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none duration-300"
               >
                 Make a Call
               </a>
