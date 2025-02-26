@@ -19,7 +19,7 @@ export default function Header() {
           </a>
           <div className="flex justify-between w-full lg:w-auto items-center lg:order-2 mt-3 lg:mt-0">
             <a
-              href="#"
+              href="tel://+918139055749"
               className="text-bg hover:bg-dblue bg-blue focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none duration-300"
             >
               Make a Call
