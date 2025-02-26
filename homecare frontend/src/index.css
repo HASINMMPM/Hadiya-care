@@ -7,6 +7,10 @@
     --color-bg: #D6D7D4;
   }
 
+
+
+
+  
 .section{
     @apply max-w-screen-2xl mx-auto p-3 bg-red-600
 }   
