@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "/logo.webp";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <header>
     <nav className="bg-bg border-gray-200 px-4 lg:px-6 py-2.5">
@@ -15,6 +16,12 @@ export default function Header() {
             </span>
           </div>
         </a>
+        <a
+              href="tel://+918139055749"
+              className="text-bg hover:bg-dblue bg-blue focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none duration-300"
+            >
+              Make a Call
+            </a>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden p-2 text-blue rounded-lg focus:outline-none"
