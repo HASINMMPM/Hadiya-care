@@ -17,9 +17,14 @@
 .section {
   @apply max-w-screen-2xl mx-auto px-4 lg:px-6 py-24 ;
 }
-
+.section-title{
+  @apply text-dgreen text-xl md:text-2xl lg:text-4xl font-head font-semibold my-10 
+}
 
 
 body{
   font-family: var(--font-body);
+}
+html {
+  scroll-behavior: smooth;
 }

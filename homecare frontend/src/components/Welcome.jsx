@@ -3,11 +3,11 @@ import CountUp from "react-countup";
 import { MdAccessTime } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { GrNotes } from "react-icons/gr";
-import logo from "/logo.jpeg";
+import logo from "/caring.webp";
 
 const Welcome = () => {
   return (
-    <section className="section flex flex-col-reverse md:flex-row h-screen justify-between gap-6  items-center">
+    <section id="home" className="section flex flex-col-reverse md:flex-row  justify-between gap-6  items-center">
       {/* left */}
       <div className="flex flex-col  gap-0 md:gap-16 w-full md:w-1/2">
         <h1 className="font-head text-4xl md:text-5xl lg:text-7xl font-black ">
@@ -53,7 +53,7 @@ const Welcome = () => {
       </div>
 
       {/* right */}
-      <div className="w-full md:w-1/2">
+      <div className="w-3/4 object-fit md:w-1/2">
         <img src={logo} alt="" />
       </div>
     </section>

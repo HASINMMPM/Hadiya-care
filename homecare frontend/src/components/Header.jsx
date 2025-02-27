@@ -8,13 +8,13 @@ export default function Header() {
       <nav className=" border-gray-200  ">
         <div className="flex flex-wrap justify-between items-center">
           <a href="#" className="flex items-center ">
-            <img src={logo} className=" h-16" alt="Hilaas Logo" />
-            <div className="flex flex-col">
-              <span className="text-2xl font-semibold text-dblue">HILAAS</span>
-              <span className="text-xl font-semibold text-blue">
+            <img src={logo} className=" h-16" alt="Hadiya care Logo" />
+            {/* <div className="flex flex-col"> */}
+              <span className="text-2xl font-semibold text-dblue">HADIYA CARE</span>
+              {/* <span className="text-xl font-semibold text-blue">
                 Khadeeja Beevi Home Care
-              </span>
-            </div>
+              </span> */}
+            {/* </div> */}
           </a>
           <div className="flex flex-col-reverse lg:flex-row lg:gap-12 items-center justify-center w-full lg:w-auto">
             {/* UL part */}
