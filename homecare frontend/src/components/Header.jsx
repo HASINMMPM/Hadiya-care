@@ -4,7 +4,7 @@ import logo from "/logo.jpeg";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="max-w-screen-2xl mx-auto px-4 lg:px-6 py-2.5 " >
+    <header className="max-w-screen-2xl mx-auto px-4 lg:px-6 py-2.5 bg-[#f4f8fb] " >
       <nav className=" border-gray-200  ">
         <div className="flex flex-wrap justify-between items-center">
           <a href="#" className="flex items-center ">

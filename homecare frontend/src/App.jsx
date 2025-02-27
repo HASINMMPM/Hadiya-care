@@ -6,7 +6,7 @@ import Service from "./components/Service";
 
 const App = () => {
   return (
-    <main className="">
+    <main className="max-w-screen-2xl mx-auto bg-[#f4f8fb]">
       <Header />
       <Welcome />
       <hr />
