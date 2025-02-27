@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "/logo.jpeg";
+import logo from "/logo.png";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,14 +16,14 @@ export default function Header() {
               </span> */}
             {/* </div> */}
           </a>
-          <div className="flex flex-col-reverse lg:flex-row lg:gap-12 items-center justify-center w-full lg:w-auto">
+          <div className="flex flex-col-reverse lg:flex-row lg:gap-12 items-center justify-center w-full lg:w-auto text-xl ">
             {/* UL part */}
             <div
               className={`${
                 isOpen ? "block" : "hidden"
               } lg:flex w-full lg:w-auto`}
             >
-              <ul className="flex flex-col gap-3 lg:gap-0 mt-3 lg:mt-0 font-semibold lg:flex-row lg:space-x-8">
+              <ul className="flex flex-col gap-3 lg:gap-0 mt-3 lg:mt-0 font-semibold lg:flex-row lg:space-x-8 ">
                 <li>
                   <a href="#" className="text-dblue hover:text-blue hover:bg-white px-3 duration-300 py-1 lg:hover:bg-transparent">
                     Home
@@ -55,7 +55,7 @@ export default function Header() {
             <div className="flex justify-between w-full lg:w-auto mt-5 lg:mt-0">
               <a
                 href="tel://+918139055749"
-                className="text-white hover:bg-dblue bg-blue focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none duration-300"
+                className="text-white hover:bg-dblue bg-blue focus:ring-4 focus:ring-gray-300 font-medium rounded-lg  px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none duration-300"
               >
                 Make a Call
               </a>

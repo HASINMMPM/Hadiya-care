@@ -6,13 +6,14 @@ import Service from "./components/Service";
 
 const App = () => {
   return (
-    <main className="max-w-screen-2xl mx-auto bg-[#f4f8fb]">
+    <main className="max-w-screen-2xl mx-auto bg-bg">
       <Header />
       <Welcome />
       <hr />
       <About />
       <hr />
       <Service />
+      
     </main>
   );
 };

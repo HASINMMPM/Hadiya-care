@@ -8,6 +8,7 @@ import { motion } from "motion/react";
 // import welcome_sqr from "/welcome big.png"
 
 const Welcome = () => {
+  
   return (
     <section
       id="home"
@@ -17,8 +18,8 @@ const Welcome = () => {
       <div className="flex flex-col  gap-0 md:gap-16 w-full lg:w-1/2">
         <motion.h1
           initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.1 }}
           className="font-head text-3xl md:text-5xl lg:text-7xl font-black "
         >
           A Helping <span className="text-green">Hand</span>,<br />A Caring{" "}
@@ -27,9 +28,9 @@ const Welcome = () => {
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          className="font-sub-heading text-lg md:text-2xl"
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="paragraph"
         >
           We are more than just a home care provider—we are{" "}
           <b>a support system, a friend, and a trusted partner</b> in your
@@ -38,8 +39,8 @@ const Welcome = () => {
 
         <motion.div
           initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          transition={{ duration: 0.5, delay: 1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
           className="flex flex-col items-center justify-center p-6 mt-0 md:mt-12 text-gray-900"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -81,7 +82,7 @@ const Welcome = () => {
 
       {/* right */}
       <motion.div          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
            className="w-full object-fit lg:w-1/2">
         {/* Small screen image */}

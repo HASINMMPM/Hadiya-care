@@ -7,7 +7,7 @@
   --color-green: #45A14E;
   --color-blue: #179DA0;
   --color-dblue: #1784A3;
-  --color-bg: #d6d7d4;
+  --color-bg: #f4f8fb;
 
   --font-head: "Lustria", serif;
   --font-body: "Nunito Sans", sans-serif;
@@ -18,7 +18,10 @@
   @apply max-w-screen-2xl mx-auto px-4 lg:px-6 py-24 ;
 }
 .section-title{
-  @apply text-dgreen text-xl md:text-2xl lg:text-4xl font-head font-semibold my-10 
+  @apply text-dgreen text-xl md:text-2xl lg:text-4xl font-head font-semibold my-10 duration-300
+}
+.paragraph{
+  @apply font-sub-heading text-lg md:text-2xl
 }
 
 
@@ -29,8 +32,22 @@ html {
   scroll-behavior: smooth;
 }
 
+section:hover h2{
+  text-decoration: underline;
+}
+/* ABOUT START*/
+.paragraph b{
+  color: var(--color-dgreen);
+}
+/* ABOUT END */
+
+/* SERICES START */
+
 .services{
   background-image: url("/serviceBackgound.jpg");
   background-size: cover;
   /* background-position: center;  */
 }
+
+
+/* SERVICES END */
