@@ -12,7 +12,7 @@ const App = () => {
     <main className="max-w-screen-2xl mx-auto bg-bg">
       <a
         target="_blank"
-        className="fixed bottom-0  right-6 text-3xl md:text-4xl p-4"
+        className="fixed bottom-0  right-6 text-4xl p-4"
         href="https://wa.me/918139055749?text=Hello Hadiya care"
       >
         <IoLogoWhatsapp className="bg-green p-1 rounded-full text-bg" />
