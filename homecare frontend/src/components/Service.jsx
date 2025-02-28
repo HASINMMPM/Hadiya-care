@@ -30,7 +30,7 @@ const Service = () => {
           onClick={() => setDropdownOpen(!dropdownOpen)}
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
-          className="paragraph w-full text-white bg-blue hover:bg-dblue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+          className="paragraph w-full cursor-pointer text-white bg-blue hover:bg-dblue focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
           type="button"
         >
           {selectedServices}{" "}
@@ -59,12 +59,15 @@ const Service = () => {
         id="dropdown"
         className="z-10 hidden bg-blue divide-y divide-gray-100 rounded-lg shadow-sm w-full  max-w-screen-xl"
       >
-        <ul
+        <motion.ul 
+        initial={{ opacity: 0, y: -150 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0 }}
           className="py-2 text-sm text-white"
           aria-labelledby="dropdownDefaultButton"
         >
           <li
-            className="hover:bg-dblue px-3 py-2"
+            className="hover:bg-dblue px-3 py-2 cursor-pointer"
             onClick={() => setSelectedServices("Our Services")}
           >
             <span className=" paragraph font-semibold cursor-pointer  ">
@@ -72,7 +75,7 @@ const Service = () => {
             </span>
           </li>
           <li
-            className="hover:bg-dblue px-3 py-2"
+            className="hover:bg-dblue px-3 py-2 cursor-pointer"
             onClick={() => setSelectedServices("Nursing Home Care Services")}
           >
             <span className=" paragraph font-semibold cursor-pointer  ">
@@ -80,14 +83,14 @@ const Service = () => {
             </span>
           </li>
           <li
-            className="hover:bg-dblue px-3 py-2"
+            className="hover:bg-dblue px-3 py-2 cursor-pointer"
             onClick={() => setSelectedServices("Other Services")}
           >
             <span className=" paragraph font-semibold cursor-pointer  ">
               Other Services
             </span>
           </li>
-        </ul>
+        </motion.ul>
       </div>
       {/* SHOW SELECTED START */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 py-6 px-3">
