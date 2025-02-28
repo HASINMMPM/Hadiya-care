@@ -30,7 +30,7 @@ const About = () => {
             Looking for reliable home care services?{" "}
             <a
               href="tel://+918139055749"
-              className="text-white hover:bg-dblue bg-blue focus:ring-4 focus:ring-gray-300 font-medium rounded-lg  px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none duration-300"
+              className="text-white ml-3 hover:bg-dblue bg-blue focus:ring-4 focus:ring-gray-300 font-medium rounded-lg  px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none duration-300"
             >
               Contact us
             </a>{" "}

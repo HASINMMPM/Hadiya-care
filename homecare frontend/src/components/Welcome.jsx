@@ -46,7 +46,7 @@ const Welcome = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* 24/7 Service */}
             <div className="flex flex-col items-center gap-2 text-center">
-              <MdAccessTime className="text-4xl text-dblue" />
+              <MdAccessTime className="text-2xl md:text-4xl text-dblue" />
               <span className="text-lg md:text-xl font-semibold text-gray-800">
                 24/7 Service
               </span>
@@ -68,7 +68,7 @@ const Welcome = () => {
 
             {/* No Appointment Needed */}
             <div className="flex flex-col items-center gap-2 text-center">
-              <GrNotes className="text-4xl text-red-600" />
+              <GrNotes className="text-2xl md:text-4xl text-red-600" />
               <span className="text-lg md:text-xl font-semibold text-gray-800">
                 No Appointment Needed
               </span>

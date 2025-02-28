@@ -35,6 +35,10 @@ html {
 section:hover h2{
   text-decoration: underline;
 }
+
+
+
+
 /* ABOUT START*/
 .paragraph b{
   color: var(--color-dgreen);
