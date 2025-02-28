@@ -57,12 +57,14 @@ const Service = () => {
       {/* <!-- Dropdown menu --> */}
       <div
         id="dropdown"
-        className="z-10 hidden bg-blue divide-y divide-gray-100 rounded-lg shadow-sm w-full  max-w-screen-xl"
+        className={`z-10 bg-blue divide-y divide-gray-100 rounded-lg shadow-sm w-full max-w-screen-xl ${
+          dropdownOpen ? "block" : "hidden"
+        }`}
       >
-        <motion.ul 
-        initial={{ opacity: 0, y: -150 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0 }}
+        <motion.ul
+          initial={{ opacity: 0, y: -150 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0 }}
           className="py-2 text-sm text-white"
           aria-labelledby="dropdownDefaultButton"
         >
