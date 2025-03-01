@@ -22,8 +22,8 @@ const ChatInfo = () => {
 
   if (show) {
     return (
-      <div className="z-60 fixed bottom-15 right-5">
-        <div className="flex items-start justify-end gap-2.5 text-lg lg:text-xl">
+      <div className="z-60 fixed bottom-15 right-5 bg-white p-2">
+        <div className="flex items-start justify-end gap-2.5 text-[14px] md:text-lg lg:text-xl">
           <div className="flex flex-col gap-1 w-full max-w-[320px] md:max-w-2xl ">
             <div className="flex  items-center justify-between space-x-2 rtl:space-x-reverse ml-2.5">
             <span onClick={() => setShow(false)} className="cursor-pointer px-1">X</span>
@@ -37,7 +37,7 @@ const ChatInfo = () => {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col  p-4 border-gray-200 bg-blue text-white rounded-es-xl  rounded-e-xl">
+            <div className="flex flex-col  p-4 border-gray-200 bg-blue text-white rounded-tl-xl  rounded-b-xl">
               <p className=" font-normal whitespace-normal">
               We are pleased to announce that <b className="underline">Hilaas Consultancy</b> has rebranded to <b className="underline">Hadiya Care</b>. This change reflects our commitment to providing compassionate and high-quality home care services. While our name has changed, our dedication to your well-being remains unwavering. Thank you for your continued trust and support.
               </p>
