@@ -57,7 +57,7 @@ const Service = () => {
       {/* <!-- Dropdown menu --> */}
       <div
         id="dropdown"
-        className={`z-10 bg-blue divide-y divide-gray-100 rounded-lg shadow-sm w-full max-w-screen-xl ${
+        className={`z-40 bg-blue divide-y divide-gray-100 rounded-lg shadow-sm w-full max-w-screen-xl ${
           dropdownOpen ? "block" : "hidden"
         }`}
       >
@@ -146,3 +146,5 @@ const Service = () => {
 };
 
 export default Service;
+
+
