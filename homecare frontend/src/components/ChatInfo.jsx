@@ -23,7 +23,7 @@ const ChatInfo = () => {
   if (show) {
     return (
       <div className="z-60 fixed bottom-15 right-5">
-        <div className="flex items-start justify-end gap-2.5 text-lg lg:text-2xl">
+        <div className="flex items-start justify-end gap-2.5 text-lg lg:text-xl">
           <div className="flex flex-col gap-1 w-full max-w-[320px] md:max-w-2xl ">
             <div className="flex  items-center justify-between space-x-2 rtl:space-x-reverse ml-2.5">
             <span onClick={() => setShow(false)} className="cursor-pointer px-1">X</span>
