@@ -109,8 +109,8 @@ const About = () => {
             return (
               <ul key={index} >
                 <motion.li
-                  initial={{ x: 100 }}
-                  whileInView={{ x: 0 }}
+                  initial={{ x: "100%"  , opacity:0 }}
+                  whileInView={{ x: 0  , opacity:1 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                   className="py-2"
                 >
