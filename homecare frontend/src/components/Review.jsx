@@ -12,12 +12,12 @@ const Review = () => {
         <motion.div
           className="flex gap-6"
           animate={{
-            x: ["100%", "-100%"], // Move from right to left
+            x: ["100%", "-100%"],
           }}
           transition={{
-            repeat: Infinity, // Infinite loop
-            duration: 20, // Adjust speed
-            ease: "linear", // Smooth movement
+            repeat: Infinity, 
+            duration: 40, 
+            ease: "linear", 
           }}
         >
           {review.map((item, index) => (

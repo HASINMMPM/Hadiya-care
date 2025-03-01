@@ -21,7 +21,7 @@ export const ourServices=[
     },
     {
         "title":"Home Visit Services",
-        "description":"Trained housemaids offering assistance with household chores and caregiving duties."
+       "description":"Comprehensive in-home healthcare services including doctor consultations, nursing care, physiotherapy sessions, and laboratory sample collection, all provided in the comfort of your home.",
     }
 ]
 export const otherServices=[
