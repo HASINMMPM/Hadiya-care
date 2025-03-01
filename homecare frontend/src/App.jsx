@@ -7,6 +7,7 @@ import Review from "./components/Review";
 
 import { FaWhatsapp  } from "react-icons/fa";
 import ChatInfo from "./components/ChatInfo";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
       >
         <FaWhatsapp  className=" rounded-full text-bg" />
       </a>
+      <Footer/>
     </main>
   );
 };
