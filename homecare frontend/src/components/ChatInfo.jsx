@@ -22,6 +22,8 @@ const ChatInfo = () => {
 
   if (show) {
     return (
+      <article className="max-w-screen-2xl mx-auto">
+
       <div className="z-60 fixed bottom-15 right-5 bg-white p-2">
         <div className="flex items-start justify-end gap-2.5 text-[14px] md:text-lg lg:text-xl">
           <div className="flex flex-col gap-1 w-full max-w-[320px] md:max-w-2xl ">
@@ -50,6 +52,7 @@ const ChatInfo = () => {
           />
         </div>
       </div>
+      </article>
     );
   }
 };
