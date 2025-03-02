@@ -5,13 +5,18 @@ const Footer = () => {
   return (
     <footer className="bg-white rounded-lg shadow-sm ">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-3">
           <a
             href="https://flowbite.com/"
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <img src="/logo.png" className="h-20" alt="Flowbite Logo" />
           </a>
+          <div className="flex flex-col font-sub-heading">
+            <span>Benglaw Villa, Puthen House</span>
+            <span>Permumparamba, Melmuri,Malappuram</span>
+            <span>Kerala, 676517</span>
+          </div>
           <ul className="flex flex-wrap items-center mb-6 text-md  gap-3 font-medium text-gray-500 sm:mb-0 ">
             <li>
               <a

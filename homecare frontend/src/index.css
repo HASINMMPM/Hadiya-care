@@ -32,12 +32,23 @@ html {
   scroll-behavior: smooth;
 }
 
-section:hover h2{
-  text-decoration: underline;
+.section-title {
+  --b: 0.1em;  
+  --c: green;
+  
+  color: #0000;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#179DA0 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
 }
-
-
-
+section:hover .section-title {
+  --_p: 100%;
+  --_s: .3s;
+}
 
 /* ABOUT START*/
 .paragraph b{
@@ -47,11 +58,7 @@ section:hover h2{
 
 /* SERICES START */
 
-.services{
-  background-image: url("/serviceBackgound.jpg");
-  background-size: cover;
-  /* background-position: center;  */
-}
+
 
 
 /* SERVICES END */

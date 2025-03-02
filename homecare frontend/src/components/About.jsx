@@ -88,10 +88,13 @@ const About = () => {
         {/* ?END */}
       </div>
 
-      
-      
-        <div className="w-full flex flex-col gap-6">
-          <h3 className="section-title">Why Us</h3>
+      {/* SECOND SECTION */}
+      <div className="grid grid-cols-1 lg:grid-cols-2">
+        {/* WHY US */}
+        <div className="w-full flex flex-col gap-6  mb-6 lg:mb-0">
+          <h3 className="text-dgreen text-xl lg:text-2xl font-head font-semibold">
+            Why Us
+          </h3>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -104,27 +107,64 @@ const About = () => {
               are some reasons why you should choose us
             </p>
           </motion.div>
-        <div className="mx-auto">
-        {data.map((data, index) => {
-            return (
-              <ul key={index} >
-                <motion.li
-                  initial={{ x: "100%"  , opacity:0 }}
-                  whileInView={{ x: 0  , opacity:1 }}
-                  transition={{ duration: 0.5, delay: 0.5 }}
-                  className="py-2"
-                >
-                  <h4 className="font-bold text-lg md:text-xl text-dgreen">
-                    {data.title}
-                  </h4>
-                  <p>{data.description}</p>
-                </motion.li>
-              </ul>
-            );
-          })}
+          <div className="mx-auto">
+            {data.map((data, index) => {
+              return (
+                <ul key={index}>
+                  <motion.li
+                    initial={{ x: "100%", opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                    className="py-2"
+                  >
+                    <h4 className="font-bold text-lg md:text-xl text-dgreen">
+                      {data.title}
+                    </h4>
+                    <p>{data.description}</p>
+                  </motion.li>
+                </ul>
+              );
+            })}
+          </div>
         </div>
+        {/* HOW WE */}
+        <div className="w-full lg:px-6 flex flex-col gap-6 ">
+          <h3 className="text-dgreen text-xl lg:text-2xl font-head font-semibold">
+            How We Work
+          </h3>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="paragraph"
+          >
+            <p className="">
+              At Hadiya Care, we are dedicated to providing exceptional
+              healthcare support for individuals traveling to Kerala for medical
+              treatment from countries such as the UAE, Qatar, Oman, Saudi
+              Arabia, Kuwait, and Muscat. We offer experienced and trained staff
+              to assist patients throughout their treatment journey, ensuring
+              comfort, personalized care, and seamless coordination with medical
+              professionals.
+            </p>
+            <p className="mt-2">
+              In addition to supporting international patients, we also provide
+              skilled caregivers to homes and hospitals across Kerala. Our
+              services are designed to offer professional and compassionate
+              assistance, whether for post-surgical care, elderly support, or
+              long-term patient care.
+            </p>
+            <p className="mt-2">
+              Located in <b>Melmuri</b>, Malappuram, Hadiya Care operates with a
+              commitment to quality healthcare services. Our working hours are
+              <b>from 9:00 AM to 6:00 PM</b>, ensuring accessibility and prompt
+              response to patient needs. With a team of dedicated professionals,
+              we strive to make healthcare more comfortable and efficient for
+              those in need.
+            </p>
+          </motion.div>
         </div>
-
+      </div>
     </section>
   );
 };
