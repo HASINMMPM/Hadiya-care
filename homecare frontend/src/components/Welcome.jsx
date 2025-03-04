@@ -6,9 +6,8 @@ import { GrNotes } from "react-icons/gr";
 import { motion } from "motion/react";
 // import welcome_rec from "/welcome small.png"
 // import welcome_sqr from "/welcome big.png"
-
+<link rel="preload" as="image" href="/welcome-big.jpg" />;
 const Welcome = () => {
-  
   return (
     <section
       id="home"
@@ -81,20 +80,28 @@ const Welcome = () => {
       </div>
 
       {/* right */}
-      <motion.div          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-           className="w-full object-fit lg:w-1/2">
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="w-full object-fit lg:w-1/2"
+      >
         {/* Small screen image */}
         <img
-          src="/welcome-small.jpg"
-          alt="Welcome Small"
+          src="/welcome-small 681.webp"
+          alt="An old women and a young girl"
+          srcSet="
+          /welcome-small 339.webp 339w,
+          /welcome-small 681.webp 681w,
+          /welcome-small 991.webp 991w"
           className="block lg:hidden"
+          loading="lazy"
         />
+
         {/* Large screen image */}
         <img
-          src="/welcome-big.jpg"
-          alt="Welcome Big"
+          src="/welcome-big.webp"
+          alt="A man stand near the old men who sitting in wheel chair"
           className="hidden lg:block"
         />
       </motion.div>

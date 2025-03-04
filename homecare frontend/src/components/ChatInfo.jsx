@@ -28,7 +28,7 @@ const ChatInfo = () => {
         <div className="flex items-start justify-end gap-2.5 text-[14px] md:text-lg lg:text-xl">
         <img
             className="w-10 h-10 p-1 bg-bg rounded-full"
-            src="/logo.png"
+            src="/logo 339.webp"
             alt="Hadiya care Logo"
           />
           <div className="flex flex-col gap-1 w-full max-w-[320px] md:max-w-2xl ">

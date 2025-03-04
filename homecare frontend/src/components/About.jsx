@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "/logo.png";
+
 import { motion } from "motion/react";
 
 const About = () => {
@@ -83,7 +83,13 @@ const About = () => {
         {/* END */}
         {/* LEFT */}
         <div className="w-full lg:w-full">
-          <img src={logo} alt="" />
+          <img src="logo 680.webp" alt="Hadiya home care logo"
+            srcSet="
+            /logo 339.webp 339w,
+            /logo 680.webp 680w,
+            /logo 999.webp 999w,
+            /logo 1300.webp 1300w" 
+            loading="lazy"/>
         </div>
         {/* ?END */}
       </div>

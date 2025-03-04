@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "/logo.png";
+import logo from "/logo 339.webp";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,5 +1,5 @@
 import React from "react";
-
+import logo from "/logo 339.webp";
 
 const Footer = () => {
   return (
@@ -7,10 +7,10 @@ const Footer = () => {
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-3">
           <a
-            href="https://flowbite.com/"
+            href="#"
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
-            <img src="/logo.png" className="h-20" alt="Flowbite Logo" />
+           <img src={logo} className=" h-24 object-cover" alt="Hadiya care Logo" />
           </a>
           <div className="flex flex-col font-sub-heading">
             <span>Benglaw Villa, Puthen House</span>
@@ -40,13 +40,13 @@ const Footer = () => {
                     r="44.899"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop offset="0" stop-color="#fd5"></stop>
-                    <stop offset=".328" stop-color="#ff543f"></stop>
-                    <stop offset=".348" stop-color="#fc5245"></stop>
-                    <stop offset=".504" stop-color="#e64771"></stop>
-                    <stop offset=".643" stop-color="#d53e91"></stop>
-                    <stop offset=".761" stop-color="#cc39a4"></stop>
-                    <stop offset=".841" stop-color="#c837ab"></stop>
+                    <stop offset="0" stopColor="#fd5"></stop>
+                    <stop offset=".328" stopColor="#ff543f"></stop>
+                    <stop offset=".348" stopColor="#fc5245"></stop>
+                    <stop offset=".504" stopColor="#e64771"></stop>
+                    <stop offset=".643" stopColor="#d53e91"></stop>
+                    <stop offset=".761" stopColor="#cc39a4"></stop>
+                    <stop offset=".841" stopColor="#c837ab"></stop>
                   </radialGradient>
                   <path
                     fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
@@ -60,11 +60,11 @@ const Footer = () => {
                     gradientTransform="matrix(1 0 0 .6663 0 1.849)"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop offset="0" stop-color="#4168c9"></stop>
+                    <stop offset="0" stopColor="#4168c9"></stop>
                     <stop
                       offset=".999"
-                      stop-color="#4168c9"
-                      stop-opacity="0"
+                      stopColor="#4168c9"
+                      stopOpacity="0"
                     ></stop>
                   </radialGradient>
                   <path
@@ -107,8 +107,8 @@ const Footer = () => {
                     y2="40.615"
                     gradientUnits="userSpaceOnUse"
                   >
-                    <stop offset="0" stop-color="#2aa4f4"></stop>
-                    <stop offset="1" stop-color="#007ad9"></stop>
+                    <stop offset="0" stopColor="#2aa4f4"></stop>
+                    <stop offset="1" stopColor="#007ad9"></stop>
                   </linearGradient>
                   <path
                     fill="url(#Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1)"
