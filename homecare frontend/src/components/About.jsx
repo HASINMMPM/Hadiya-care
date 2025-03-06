@@ -83,13 +83,13 @@ const About = () => {
         {/* END */}
         {/* LEFT */}
         <div className="w-full h-full">
-          <img src="logo 680.webp" alt="Hadiya home care logo"
-            srcSet="
-            /logo 339.webp 339w,
-            /logo 680.webp 680w,
-            /logo 999.webp 999w,
-            /logo 1300.webp 1300w" 
-            loading="lazy"/>
+        <picture>
+  <source media="(min-width:1024px)" srcSet="/logo-1300.webp" />
+  <source media="(min-width:800px)" srcSet="/logo-991.webp" />
+  <source media="(min-width:465px)" srcSet="/logo-681.webp" />
+  <source media="(min-width:250px)" srcSet="/logo-339.webp" />
+  <img src="/logo-70.webp" alt="Hadiya care logo" fetchPriority="high" />
+</picture>
         </div>
         {/* ?END */}
       </div>

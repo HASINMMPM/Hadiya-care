@@ -26,7 +26,7 @@ useEffect(() => {
         <div className="flex items-start justify-end gap-2.5 text-[14px] md:text-lg lg:text-xl">
         <img
   className="w-10 h-10 p-1 bg-bg rounded-full"
-  src="/logo 70.webp"
+  src="/logo-70.webp"
   alt="Hadiya care Logo"
   loading="lazy"
 />
