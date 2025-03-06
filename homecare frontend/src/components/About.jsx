@@ -84,8 +84,8 @@ const About = () => {
         {/* LEFT */}
         <div className="w-full h-full">
         <picture>
-  <source media="(min-width:1024px)" srcSet="/logo-1300.webp" />
-  <source media="(min-width:800px)" srcSet="/logo-999.webp" />
+  {/* <source media="(min-width:1024px)" srcSet="/logo-1300.webp" /> */}
+  {/* <source media="(min-width:800px)" srcSet="/logo-999.webp" /> */}
   <source media="(min-width:465px)" srcSet="/logo-680.webp" />
   <source media="(min-width:250px)" srcSet="/logo-339.webp" />
   <img src="/logo-70.webp" alt="Hadiya care logo" fetchPriority="high" />
