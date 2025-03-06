@@ -81,7 +81,7 @@ const Welcome = () => {
   <source media="(min-width:1024px)" srcSet="/welcome-big.webp" />
   <source media="(min-width:800px)" srcSet="/welcome-small-991.webp" />
   <source media="(min-width:465px)" srcSet="/welcome-small-681.webp" />
-  <img src="/welcome-small-339.webp" alt="Flowers" fetchPriority="high" />
+  <img src="/welcome-small-339.webp" alt="A caring connection across generations" fetchPriority="high" />
 </picture>
 
 
