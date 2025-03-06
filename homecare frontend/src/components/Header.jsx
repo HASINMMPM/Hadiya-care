@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "/logo 339.webp";
+import logo from "/logo 70.webp";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,11 +44,7 @@ export default function Header() {
                     Testimonial
                   </a>
                 </li>
-                <li>
-                  <a href="#contactUs" className="text-dblue hover:text-blue hover:bg-white px-3 duration-300 py-1 lg:hover:bg-transparent">
-                    Contact Us
-                  </a>
-                </li>
+              
               </ul>
             </div>
             {/* call hamb */}

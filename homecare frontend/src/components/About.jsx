@@ -82,7 +82,7 @@ const About = () => {
         </div>
         {/* END */}
         {/* LEFT */}
-        <div className="w-full lg:w-full">
+        <div className="w-full h-full">
           <img src="logo 680.webp" alt="Hadiya home care logo"
             srcSet="
             /logo 339.webp 339w,

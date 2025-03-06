@@ -22,7 +22,7 @@ const App = () => {
       <a
         target="_blank"
         className="z-60 fixed bottom-5 bg-green right-5 text-4xl p-2 rounded-full"
-        href="https://wa.me/918139055749?text=Hello Hadiya care"
+        href="https://wa.me/918139055749?text=Hello%20Hadiya%20care"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

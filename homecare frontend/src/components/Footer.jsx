@@ -1,17 +1,17 @@
 import React from "react";
-import logo from "/logo 339.webp";
+import logo from "/logo 70.webp";
 
 const Footer = () => {
   return (
     <footer className="bg-white rounded-lg shadow-sm ">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="flex flex-col lg:flex-row items-start justify-between gap-3">
-          <a
-            href="#"
-            className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
-          >
-           <img src={logo} className=" h-24 object-cover" alt="Hadiya care Logo" />
-          </a>
+         <a href="#" className="flex flex-col items-start ">
+                    <img src={logo} className=" h-16 w-16" alt="Hadiya care Logo" />
+                   
+                      <span className="text-2xl font-semibold text-dblue">HADIYA CARE</span>
+                    
+                  </a>
           <div className="flex flex-col font-sub-heading">
             <span>Benglaw Villa, Puthen House</span>
             <span>Permumparamba, Melmuri,Malappuram</span>

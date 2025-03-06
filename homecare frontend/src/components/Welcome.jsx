@@ -4,9 +4,6 @@ import { MdAccessTime } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
 import { GrNotes } from "react-icons/gr";
 import { motion } from "motion/react";
-// import welcome_rec from "/welcome small.png"
-// import welcome_sqr from "/welcome big.png"
-<link rel="preload" as="image" href="/welcome-big.jpg" />;
 const Welcome = () => {
   return (
     <section
@@ -80,31 +77,16 @@ const Welcome = () => {
       </div>
 
       {/* right */}
-      <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="w-full object-fit lg:w-1/2"
-      >
-        {/* Small screen image */}
+      <picture>
+        <source media="(min-width:1024px)" srcSet="/welcome-big.webp" />
+        <source media="(min-width:800px)" srcSet="/welcome-small-991.webp" />
+        <source media="(min-width:465px)" srcSet="/welcome-small-681.webp" />
         <img
-          src="/welcome-small 681.webp"
-          alt="An old women and a young girl"
-          srcSet="
-          /welcome-small 339.webp 339w,
-          /welcome-small 681.webp 681w,
-          /welcome-small 991.webp 991w"
-          className="block lg:hidden"
-          loading="lazy"
+          src="/welcome-small-339.webp"
+          alt="An old woman and a young girl"
+          style={{ width: "auto" }} 
         />
-
-        {/* Large screen image */}
-        <img
-          src="/welcome-big.webp"
-          alt="A man stand near the old men who sitting in wheel chair"
-          className="hidden lg:block"
-        />
-      </motion.div>
+      </picture>
     </section>
   );
 };
