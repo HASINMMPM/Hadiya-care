@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react'
 import { motion } from "framer-motion";
 import review from "../assets/comment.json";
-
-const Review = () => {
-  const colors = [
+ const colors = [
     "bg-red-500",
     "bg-green",
     "bg-blue",
@@ -13,12 +11,18 @@ const Review = () => {
     "bg-dblue",
     "bg-dgreen",
   ];
+const Testimonal = () => {
   return (
-    <section className="section overflow-hidden" id="testimonial">
-      <h2 className="section-title">Testimonial</h2>
-
-      <div className="relative w-full overflow-hidden">
-        <motion.div
+      <section className="py-16 bg-white overflow-hidden">
+        <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+                <span className="text-[#4DB6AC] font-medium">HEAR FROM FAMILIES</span>
+                <h2 className="text-3xl font-bold text-[#00897B] mt-2 mb-4 ">What Families Say</h2>
+                <p className="max-w-2xl mx-auto ">Don't just take our word for it - hear from families who've experienced our care firsthand.</p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <motion.div
           className="flex gap-6"
           animate={{
             x: ["100%", "-100%"],
@@ -48,20 +52,16 @@ const Review = () => {
             </div>
           ))}
         </motion.div>
-      </div>
-      <div className="flex justify-center mt-12">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-         
-          href="https://www.justdial.com/Malappuram/High-Tech-Garments-Melmuri/9999PX483-X483-221202155127-N5W2_BZDET?via=scode"
-          className="text-white bg-blue hover:bg-dblue px-8 py-2 rounded-md duration-150" 
-        >
-          Share Your Feedback & View More
-        </a>
-      </div>
+            </div>
+            
+            <div className="text-center mt-12">
+                <button className="bg-[#00897B] text-white px-8 py-3 rounded-full hover:bg-gray-200 hover:text-[#00897B] transition inline-flex items-center">
+                    <i className="fas fa-pen-fancy mr-2"></i> Share Your Experience
+                </button>
+            </div>
+        </div>
     </section>
-  );
-};
+  )
+}
 
-export default Review;
+export default Testimonal

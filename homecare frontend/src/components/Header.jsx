@@ -1,70 +1,128 @@
-import React, { useState } from "react";
-import logo from "/logo-70.webp";
+import React, { useEffect, useRef, useState } from "react";
+import logo from "../assets/logo.webp";
 
-export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+const Header = () => {
+  const navMenuRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    const handleSmoothScroll = (e) => {
+      const target = e.target;
+      if (
+        target.tagName === "A" &&
+        target.getAttribute("href").startsWith("#")
+      ) {
+        e.preventDefault();
+
+        const targetId = target.getAttribute("href");
+        if (targetId === "#") return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: "smooth",
+          });
+
+          // Close mobile menu after navigation
+          setIsMenuOpen(false);
+        }
+      }
+    };
+
+    document.addEventListener("click", handleSmoothScroll);
+    return () => document.removeEventListener("click", handleSmoothScroll);
+  }, []);
+
   return (
-    <header className="max-w-screen-2xl mx-auto px-4 lg:px-6 py-2.5 bg-[#f4f8fb] " >
-      <nav className=" border-gray-200  ">
-        <div className="flex flex-wrap justify-between items-center">
-          <a href="#" className="flex items-center ">
-            <img src={logo} className=" h-16" alt="Hadiya care Logo" />
-            {/* <div className="flex flex-col"> */}
-              <span className="text-2xl font-semibold text-dblue">HADIYA CARE</span>
-              {/* <span className="text-xl font-semibold text-blue">
-                Khadeeja Beevi Home Care
-              </span> */}
-            {/* </div> */}
-          </a>
-          <div className="flex flex-col-reverse lg:flex-row lg:gap-12 items-center justify-center w-full lg:w-auto text-xl ">
-            {/* UL part */}
-            <div
-              className={`${
-                isOpen ? "block" : "hidden"
-              } lg:flex w-full lg:w-auto`}
-            >
-              <ul className="flex flex-col gap-3 lg:gap-0 mt-3 lg:mt-0 font-semibold lg:flex-row lg:space-x-8 ">
-                <li>
-                  <a href="#" className="text-dblue hover:text-blue hover:bg-white px-3 duration-300 py-1 lg:hover:bg-transparent">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#about" className="text-dblue hover:text-blue hover:bg-white px-3 duration-300 py-1 lg:hover:bg-transparent">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#services" className="text-dblue hover:text-blue hover:bg-white px-3 duration-300 py-1 lg:hover:bg-transparent">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="#testimonial" className="text-dblue hover:text-blue hover:bg-white px-3 duration-300 py-1 lg:hover:bg-transparent">
-                    Testimonial
-                  </a>
-                </li>
-              
-              </ul>
-            </div>
-            {/* call hamb */}
-            <div className="flex justify-between w-full lg:w-auto mt-5 lg:mt-0">
-              <a
-                href="tel://+918139055749"
-                className="text-white hover:bg-dblue bg-blue focus:ring-4 focus:ring-gray-300 font-medium rounded-lg  px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none duration-300"
-              >
-                Make a Call
-              </a>
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden p-2 text-blue rounded-lg focus:outline-none text-end"
-              >
-                {isOpen ? "✖" : "☰"}
-              </button>
-            </div>
+    <header className="bg-white shadow-sm fixed w-full z-50">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="flex items-center">
+          <div className="w-14 h-14 flex items-center justify-center mr-2">
+            <img src={logo} alt="" />
           </div>
+          <span className="text-2xl font-bold text-[#00897B]">Hadiya Care</span>
         </div>
-      </nav>
+
+        <nav
+          className={`md:block ${
+            isMenuOpen
+              ? "block absolute top-16 left-0 right-0 bg-white py-4 px-8 shadow-lg"
+              : "hidden"
+          } md:static`}
+        >
+          <ul
+            className="flex flex-col md:flex-row md:space-x-8"
+            ref={navMenuRef}
+          >
+            <li>
+              <a
+                href="#"
+                className="font-medium hover:text-[#4DB6AC] transition"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#about"
+                className="font-medium hover:text-[#4DB6AC] transition"
+              >
+                About
+              </a>
+            </li>
+            <li>
+              <a
+                href="#services"
+                className="font-medium hover:text-[#4DB6AC] transition"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                className="font-medium hover:text-[#4DB6AC] transition"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div className="flex items-center">
+          <button className="bg-[#4DB6AC] text-white px-6 py-2 rounded-full hover:bg-[#00897B] transition hidden md:block">
+            Call Now
+          </button>
+          <button
+            className="md:hidden text-[#00897B] focus:outline-none"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
     </header>
   );
-}
+};
+
+export default Header;

@@ -2,17 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
-@theme {
-  --color-dgreen: #308743;
-  --color-green: #45A14E;
-  --color-blue: #179DA0;
-  --color-dblue: #1784A3;
-  --color-bg: #f4f8fb;
 
-  --font-head: "Lustria", serif;
-  --font-body: "Nunito Sans", sans-serif;
-  --font-sub-heading: "Lustria", serif;
-}
 
 .section {
   @apply max-w-screen-2xl mx-auto px-4 lg:px-6 py-16 ;
@@ -24,7 +14,53 @@
   @apply font-sub-heading text-lg md:text-2xl
 }
 
-
+  .hero-image {
+        background-image: linear-gradient(
+            rgba(0, 137, 123, 0.5),
+            rgba(0, 137, 123, 0.3)
+          ),
+          url("https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
+        min-height: 70vh;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4db6ac;
+        border-radius: 4px;
+      }
+      .why-us-card {
+        transition: all 0.3s ease;
+      }
+      .why-us-card:hover {
+        background-color: #f7fafc;
+        transform: scale(1.03);
+      }
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+      @keyframes floating {
+        0% {
+          transform: translate(0, 0px);
+        }
+        50% {
+          transform: translate(0, 10px);
+        }
+        100% {
+          transform: translate(0, -0px);
+        }
+      }
+      
 body{
   font-family: var(--font-body);
 }
@@ -62,3 +98,4 @@ section:hover .section-title {
 
 
 /* SERVICES END */
+

@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hilaas Homecare - Compassionate Care at Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              hilaas: {
+                light: "#E0F2F1",
+                primary: "#4DB6AC",
+                dark: "#00897B",
+                text: "#374151",
+              },
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .hero-image {
+        background-image: linear-gradient(
+            rgba(0, 137, 123, 0.5),
+            rgba(0, 137, 123, 0.3)
+          ),
+          url("https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
+        min-height: 70vh;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4db6ac;
+        border-radius: 4px;
+      }
+      .why-us-card {
+        transition: all 0.3s ease;
+      }
+      .why-us-card:hover {
+        background-color: #f7fafc;
+        transform: scale(1.03);
+      }
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+      @keyframes floating {
+        0% {
+          transform: translate(0, 0px);
+        }
+        50% {
+          transform: translate(0, 10px);
+        }
+        100% {
+          transform: translate(0, -0px);
+        }
+      }
+    </style>
+  </head>
+  <body class="font-poppins text-hilaas-text bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <div
+            class="w-14 h-14 bg-hilaas-primary rounded-full flex items-center justify-center mr-2"
+          >
+            <span class="text-white font-bold text-xl">H</span>
+          </div>
+          <span class="text-2xl font-bold text-hilaas-dark"
+            >Hilaas Homecare</span
+          >
+        </div>
+
+        <nav class="hidden md:block">
+          <ul class="flex space-x-8">
+            <li>
+              <a
+                href="#"
+                class="font-medium hover:text-hilaas-primary transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="font-medium hover:text-hilaas-primary transition"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="font-medium hover:text-hilaas-primary transition"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="font-medium hover:text-hilaas-primary transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex items-center">
+          <button
+            class="bg-hilaas-primary text-white px-6 py-2 rounded-full hover:bg-hilaas-dark transition hidden md:block"
+          >
+            Call Now
+          </button>
+          <button class="md:hidden text-hilaas-dark focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-image flex items-center pt-24">
+      <div class="container mx-auto px-4 py-16">
+        <div class="max-w-2xl bg-white bg-opacity-90 p-8 rounded-xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-hilaas-dark mb-4">
+            Compassionate Care <span class="text-hilaas-primary">At Home</span>
+          </h1>
+          <p class="text-lg mb-8">
+            At Hilaas Homecare, we provide personalized, dignified care that
+            helps seniors maintain independence and quality of life in the
+            comfort of their own home.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="bg-hilaas-primary text-white px-8 py-3 rounded-full hover:bg-hilaas-dark transition"
+            >
+              Request Care
+            </button>
+            <button
+              class="border border-hilaas-primary text-hilaas-primary px-8 py-3 rounded-full hover:bg-hilaas-light transition"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="feature-card bg-hilaas-light p-6 rounded-xl transition duration-300 flex items-start"
+          >
+            <div class="bg-white p-3 rounded-full mr-4">
+              <i class="fas fa-clock text-hilaas-primary text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">24/7 Service</h3>
+              <p class="text-gray-600">
+                Round-the-clock care available whenever you need us.
+              </p>
+            </div>
+          </div>
+          <div
+            class="feature-card bg-hilaas-light p-6 rounded-xl transition duration-300 flex items-start"
+          >
+            <div class="bg-white p-3 rounded-full mr-4">
+              <i class="fas fa-smile text-hilaas-primary text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Satisfied Clients</h3>
+              <p class="text-gray-600">
+                95% of families report improved quality of life.
+              </p>
+            </div>
+          </div>
+          <div
+            class="feature-card bg-hilaas-light p-6 rounded-xl transition duration-300 flex items-start"
+          >
+            <div class="bg-white p-3 rounded-full mr-4">
+              <i class="fas fa-calendar-check text-hilaas-primary text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">No Appointment Needed</h3>
+              <p class="text-gray-600">
+                Same-day service available for urgent needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-hilaas-light">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center">
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h2 class="text-3xl font-bold text-hilaas-dark mb-6">
+              Our Mission
+            </h2>
+            <p class="text-lg mb-6">
+              Founded in 2010, Hilaas Homecare is built on the belief that
+              everyone deserves to age with dignity in the comfort of their
+              home. We carefully match caregivers not just based on skills, but
+              on personality and shared interests to foster meaningful
+              relationships.
+            </p>
+            <p class="text-lg mb-8">
+              Our trained professionals provide compassionate care while
+              respecting each individual's unique needs, preferences, and
+              routines. We empower seniors to maintain their independence while
+              ensuring safety and wellbeing.
+            </p>
+            <div class="flex items-center">
+              <button
+                class="bg-hilaas-primary text-white px-8 py-3 rounded-full hover:bg-hilaas-dark transition mr-6"
+              >
+                Call Now
+              </button>
+              <span class="text-hilaas-primary italic"
+                >"We're just one call away."</span
+              >
+            </div>
+          </div>
+          <div class="lg:w-1/2 relative">
+            <img
+              src="https://images.unsplash.com/photo-1600055964996-894f3406b89e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+              alt="Caregiver helping senior woman"
+              class="rounded-xl shadow-lg w-full"
+            />
+            <div
+              class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-md hidden lg:block"
+            >
+              <div class="flex items-center">
+                <div class="bg-hilaas-primary text-white p-3 rounded-full mr-3">
+                  <i class="fas fa-heart text-xl"></i>
+                </div>
+                <div>
+                  <p class="font-semibold">250+</p>
+                  <p class="text-sm text-gray-600">Families Helped</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="text-hilaas-primary font-medium">WHY CHOOSE HILAAS</span>
+          <h2 class="text-3xl font-bold text-hilaas-dark mt-2 mb-4">
+            What Makes Us Different
+          </h2>
+          <p class="max-w-2xl mx-auto text-lg">
+            We combine the warmth of human connection with the efficiency of
+            smart technology to deliver care that truly makes a difference in
+            our clients' lives.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="why-us-card bg-white border border-gray-100 rounded-xl p-8 shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-hilaas-primary mb-4">
+              <i class="fas fa-user-shield text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Trusted Caregivers</h3>
+            <p class="text-gray-600">
+              All caregivers undergo rigorous background checks, reference
+              verification, and specialized training.
+            </p>
+          </div>
+          <div
+            class="why-us-card bg-white border border-gray-100 rounded-xl p-8 shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-hilaas-primary mb-4">
+              <i class="fas fa-stopwatch text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Fast Response Time</h3>
+            <p class="text-gray-600">
+              95% of new client requests receive a caregiver match within 24
+              hours.
+            </p>
+          </div>
+          <div
+            class="why-us-card bg-white border border-gray-100 rounded-xl p-8 shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-hilaas-primary mb-4">
+              <i class="fas fa-hands-helping text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Human Touch + Technology</h3>
+            <p class="text-gray-600">
+              Pilot AI support enhances caregiver coordination while preserving
+              personal engagement.
+            </p>
+          </div>
+          <div
+            class="why-us-card bg-white border border-gray-100 rounded-xl p-8 shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-hilaas-primary mb-4">
+              <i class="fas fa-hand-holding-usd text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Affordable Packages</h3>
+            <p class="text-gray-600">
+              Customizable plans that fit different budgets without compromising
+              quality.
+            </p>
+          </div>
+          <div
+            class="why-us-card bg-white border border-gray-100 rounded-xl p-8 shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-hilaas-primary mb-4">
+              <i class="fas fa-clipboard-list text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Family Progress Updates</h3>
+            <p class="text-gray-600">
+              Regular detailed reports and direct access to care plans through
+              our secure portal.
+            </p>
+          </div>
+          <div
+            class="why-us-card bg-white border border-gray-100 rounded-xl p-8 shadow-md hover:shadow-lg transition"
+          >
+            <div class="text-hilaas-primary mb-4">
+              <i class="fas fa-calendar-alt text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Flexible Scheduling</h3>
+            <p class="text-gray-600">
+              From 2-hour visits to live-in care, we adapt to your changing
+              needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="py-16 bg-hilaas-light">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="text-hilaas-primary font-medium">OUR PROCESS</span>
+          <h2 class="text-3xl font-bold text-hilaas-dark mt-2 mb-4">
+            How We Work
+          </h2>
+          <p class="max-w-2xl mx-auto text-lg">
+            Our streamlined process ensures you get the right care quickly and
+            efficiently.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+          <div class="bg-white p-6 rounded-xl text-center">
+            <div
+              class="bg-hilaas-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-comment-medical text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">1. Request</h3>
+            <p class="text-gray-600">
+              Call or fill our online form to describe your needs.
+            </p>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="hidden sm:block">
+              <i class="fas fa-arrow-right text-hilaas-primary text-2xl"></i>
+            </div>
+            <div class="sm:hidden">
+              <i class="fas fa-arrow-down text-hilaas-primary text-2xl"></i>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl text-center">
+            <div
+              class="bg-hilaas-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-people-arrows text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">2. Match</h3>
+            <p class="text-gray-600">
+              We carefully select the perfect caregiver for your needs.
+            </p>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="hidden sm:block">
+              <i class="fas fa-arrow-right text-hilaas-primary text-2xl"></i>
+            </div>
+            <div class="sm:hidden">
+              <i class="fas fa-arrow-down text-hilaas-primary text-2xl"></i>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl text-center">
+            <div
+              class="bg-hilaas-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-home text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">3. Care Begins</h3>
+            <p class="text-gray-600">
+              Your caregiver starts with a detailed orientation.
+            </p>
+          </div>
+          <div class="flex items-center justify-center">
+            <div class="hidden sm:block">
+              <i class="fas fa-arrow-right text-hilaas-primary text-2xl"></i>
+            </div>
+            <div class="sm:hidden">
+              <i class="fas fa-arrow-down text-hilaas-primary text-2xl"></i>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl text-center">
+            <div
+              class="bg-hilaas-primary text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-hands-helping text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">4. Ongoing Support</h3>
+            <p class="text-gray-600">
+              We continually monitor and adjust care as needed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="text-hilaas-primary font-medium">WHAT WE OFFER</span>
+          <h2 class="text-3xl font-bold text-hilaas-dark mt-2 mb-4">
+            Our Services
+          </h2>
+          <p class="max-w-2xl mx-auto text-lg">
+            Comprehensive care solutions tailored to individual needs and
+            preferences.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition"
+          >
+            <div class="bg-hilaas-primary p-6">
+              <i class="fas fa-user-nurse text-4xl text-white"></i>
+              <h3 class="text-xl font-semibold text-white mt-4 mb-2">
+                Personal Care
+              </h3>
+            </div>
+            <div class="p-6">
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-hilaas-primary mt-1 mr-2"></i>
+                  <span>Bathing, grooming & dressing assistance</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-hilaas-primary mt-1 mr-2"></i>
+                  <span>Mobility support & transfer</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-hilaas-primary mt-1 mr-2"></i>
+                  <span>Toileting and incontinence care</span>
+                </li>
+              </ul>
+              <button
+                class="mt-6 text-hilaas-primary font-medium hover:underline"
+              >
+                Learn More →
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition"
+          >
+            <div class="bg-hilaas-primary p-6">
+              <i class="fas fa-first-aid text-4xl text-white"></i>
+              <h3 class="text-xl font-semibold text-white mt-4 mb-2">
+                Medical Support
+              </h3>
+            </div>
+            <div class="p-6">
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-hilaas-primary mt-1 mr-2"></i>
+                  <span>Medication reminders</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-hilaas-primary mt-1 mr-2"></i>
+                  <span>Post-hospitalization care</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-hilaas-primary mt-1 mr-2"></i>
+                  <span>Chronic condition management</span>
+                </li>
+              </ul>
+              <button
+                class="mt-6 text-hilaas-primary font-medium hover:underline"
+              >
+                Learn More →
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition"
+          >
+            <div class="bg-hilaas-primary p-6">
+              <i class="fas fa-house-user text-4xl text-white"></i>
+              <h3 class="text-xl font-semibold text-white mt-4 mb-2">
+                Daily Help
+              </h3>
+            </div>
+            <div class="p-6">
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-hilaas-primary mt-1 mr-2"></i>
+                  <span>Light housekeeping</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-hilaas-primary mt-1 mr-2"></i>
+                  <span>Meal preparation</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-hilaas-primary mt-1 mr-2"></i>
+                  <span>Transportation & errands</span>
+                </li>
+              </ul>
+              <button
+                class="mt-6 text-hilaas-primary font-medium hover:underline"
+              >
+                Learn More →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-hilaas-dark text-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <span class="text-hilaas-light font-medium">HEAR FROM FAMILIES</span>
+          <h2 class="text-3xl font-bold mt-2 mb-4">What Families Say</h2>
+          <p class="max-w-2xl mx-auto text-gray-200">
+            Don't just take our word for it - hear from families who've
+            experienced our care firsthand.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="bg-white bg-opacity-10 p-8 rounded-xl">
+            <div class="flex mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="italic mb-6">
+              "Hilaas caregiver Sarah has been a godsend for my mother. She
+              treats her with such dignity and respect, and goes above and
+              beyond every day. I can finally sleep knowing mom is in good
+              hands."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Jane Smith"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <p class="font-semibold">Jane Smith</p>
+                <p class="text-gray-300 text-sm">Daughter of client</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white bg-opacity-10 p-8 rounded-xl">
+            <div class="flex mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+            </div>
+            <p class="italic mb-6">
+              "After my surgery, Hilaas provided excellent short-term care. The
+              nurses were professional yet so warm, exactly what I needed to
+              recover comfortably at home. Their communication with my doctor
+              was exceptional."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Robert Johnson"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <p class="font-semibold">Robert Johnson</p>
+                <p class="text-gray-300 text-sm">Client</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white bg-opacity-10 p-8 rounded-xl">
+            <div class="flex mb-4">
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star text-yellow-400"></i>
+              <i class="fas fa-star-half-alt text-yellow-400"></i>
+            </div>
+            <p class="italic mb-6">
+              "The regular updates and digital care plan give me peace of mind
+              while I live across the country from my dad. Their use of
+              technology bridges the distance while maintaining a personal
+              touch."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Michelle Chen"
+                class="w-12 h-12 rounded-full mr-4"
+              />
+              <div>
+                <p class="font-semibold">Michelle Chen</p>
+                <p class="text-gray-300 text-sm">Long-distance daughter</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <button
+            class="bg-white text-hilaas-dark px-8 py-3 rounded-full hover:bg-gray-200 transition inline-flex items-center"
+          >
+            <i class="fas fa-pen-fancy mr-2"></i> Share Your Experience
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section
+      class="py-16"
+      style="background: linear-gradient(135deg, #4db6ac 0%, #00897b 100%)"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          Ready to Get Started?
+        </h2>
+        <p class="text-xl text-white opacity-90 max-w-2xl mx-auto mb-8">
+          Contact us today for a free consultation to discuss your care needs
+          and how we can help.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <button
+            class="bg-white text-hilaas-primary px-8 py-3 rounded-full hover:bg-gray-100 transition font-medium"
+          >
+            <i class="fas fa-phone-alt mr-2"></i> Call Now
+          </button>
+          <button
+            class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-hilaas-primary transition font-medium"
+          >
+            <i class="fas fa-envelope mr-2"></i> Send Message
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div>
+            <div class="flex items-center mb-6">
+              <div
+                class="w-12 h-12 bg-hilaas-primary rounded-full flex items-center justify-center mr-2"
+              >
+                <span class="text-white font-bold text-xl">H</span>
+              </div>
+              <span class="text-2xl font-bold">Hilaas Homecare</span>
+            </div>
+            <p class="mb-6 text-gray-300">
+              Providing compassionate, professional home care services since
+              2010. Licensed, bonded, and insured.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Services</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Personal Care</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Companion Care</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Alzheimer's Care</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Respite Care</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Post-Surgical Care</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i
+                  class="fas fa-map-marker-alt text-hilaas-primary mt-1 mr-3"
+                ></i>
+                <span class="text-gray-400"
+                  >123 Care Lane<br />Boston, MA 02108</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone-alt text-hilaas-primary mt-1 mr-3"></i>
+                <a
+                  href="tel:+18005551234"
+                  class="text-gray-400 hover:text-white transition"
+                  >+1 (800) 555-1234</a
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope text-hilaas-primary mt-1 mr-3"></i>
+                <a
+                  href="mailto:care@hilaas.com"
+                  class="text-gray-400 hover:text-white transition"
+                  >care@hilaas.com</a
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-clock text-hilaas-primary mt-1 mr-3"></i>
+                <span class="text-gray-400">24/7 Availability</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-500 text-sm">
+            © 2023 Hilaas Homecare. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-400 transition text-sm"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-400 transition text-sm"
+              >Terms of Service</a
+            >
+            <span class="text-gray-500 text-sm"
+              >Powered by
+              <span class="text-hilaas-primary">Pilot AI</span></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Simple mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.querySelector(".md\\:hidden button");
+        const navMenu = document.querySelector("nav ul");
+
+        mobileMenuButton.addEventListener("click", function () {
+          const isHidden = navMenu.classList.contains("hidden");
+
+          if (isHidden) {
+            navMenu.classList.remove("hidden");
+            navMenu.classList.add(
+              "block",
+              "absolute",
+              "top-16",
+              "left-0",
+              "right-0",
+              "bg-white",
+              "py-4",
+              "px-8",
+              "shadow-lg"
+            );
+
+            // Create close menu items
+            const menuItems = Array.from(navMenu.querySelectorAll("li")).map(
+              (li) => li.cloneNode(true)
+            );
+            navMenu.innerHTML = "";
+            menuItems.forEach((item) => {
+              navMenu.appendChild(item);
+            });
+          } else {
+            navMenu.classList.add("hidden");
+            navMenu.classList.remove(
+              "block",
+              "absolute",
+              "top-16",
+              "left-0",
+              "right-0",
+              "bg-white",
+              "py-4",
+              "px-8",
+              "shadow-lg"
+            );
+          }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+
+              // Close mobile menu if open
+              if (!navMenu.classList.contains("hidden")) {
+                navMenu.classList.add("hidden");
+                navMenu.classList.remove(
+                  "block",
+                  "absolute",
+                  "top-16",
+                  "left-0",
+                  "right-0",
+                  "bg-white",
+                  "py-4",
+                  "px-8",
+                  "shadow-lg"
+                );
+              }
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

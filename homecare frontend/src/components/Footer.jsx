@@ -1,17 +1,18 @@
 import React from "react";
-import logo from "/logo-70.webp";
+import logo from "../assets/logo.webp"
 
 const Footer = () => {
   return (
-    <footer className="bg-white rounded-lg shadow-sm ">
-      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-3">
-         <a href="#" className="flex flex-col items-start ">
-                    <img src={logo} className=" h-16 w-16" alt="Hadiya care Logo" />
-                   
-                      <span className="text-2xl font-semibold text-dblue">HADIYA CARE</span>
-                    
-                  </a>
+    <footer className="bg-white rounded-lg shadow-sm pt-16">
+      <div className="w-full max-w-screen-xl mx-auto ">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3 ">
+          <a href="#" className="flex flex-col items-start ">
+            <img src={logo} className=" h-16 w-16" alt="Hadiya care Logo" />
+
+            <span className="text-2xl font-semibold text-dblue">
+              HADIYA CARE
+            </span>
+          </a>
           <div className="flex flex-col font-sub-heading">
             <span>Benglaw Villa, Puthen House</span>
             <span>Permumparamba, Melmuri,Malappuram</span>
@@ -123,8 +124,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
-        <span className="block text-sm text-gray-500 sm:text-center ">
+        <hr className="my-6 border-gray-200 sm:mx-auto " />
+        <span className="block text-sm text-gray-500 sm:text-center mb-6 ">
           © 2025{" "}
           <a href="#" className="hover:underline">
             Hadiya care™
