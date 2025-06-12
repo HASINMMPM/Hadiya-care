@@ -2,100 +2,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Lustria&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
-
-
-.section {
-  @apply max-w-screen-2xl mx-auto px-4 lg:px-6 py-16 ;
+.hero-image {
+  background-image: linear-gradient(
+      rgba(0, 137, 123, 0.5),
+      rgba(0, 137, 123, 0.3)
+    ),
+    url("./assets/hero-bg.avif");
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
 }
-.section-title{
-  @apply text-dgreen text-xl md:text-2xl lg:text-4xl font-head font-semibold my-10 duration-300
+footer {
+  background-image: linear-gradient(
+      rgba(0, 137, 123, 0.5),
+      rgba(0, 137, 123, 0.3)
+    ),
+    url("./assets/hero-bg.avif");
+  background-size: cover;
+  background-position: end;
 }
-.paragraph{
-  @apply font-sub-heading text-lg md:text-2xl
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #4db6ac;
+  border-radius: 4px;
+}
+.why-us-card {
+  transition: all 0.3s ease;
+}
+.why-us-card:hover {
+  background-color: #f7fafc;
+  transform: scale(1.03);
+}
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
 }
 
-  .hero-image {
-        background-image: linear-gradient(
-            rgba(0, 137, 123, 0.5),
-            rgba(0, 137, 123, 0.3)
-          ),
-          url("https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-        background-size: cover;
-        background-position: center;
-        min-height: 70vh;
-      }
-      .feature-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-      }
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f1f1;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #4db6ac;
-        border-radius: 4px;
-      }
-      .why-us-card {
-        transition: all 0.3s ease;
-      }
-      .why-us-card:hover {
-        background-color: #f7fafc;
-        transform: scale(1.03);
-      }
-      .floating {
-        animation: floating 3s ease-in-out infinite;
-      }
-      @keyframes floating {
-        0% {
-          transform: translate(0, 0px);
-        }
-        50% {
-          transform: translate(0, 10px);
-        }
-        100% {
-          transform: translate(0, -0px);
-        }
-      }
-      
-body{
+body {
   font-family: var(--font-body);
 }
 html {
   scroll-behavior: smooth;
 }
-
-.section-title {
-  --b: 0.1em;  
-  --c: green;
-  
-  color: #0000;
-  padding-block: var(--b);
-  background: 
-    linear-gradient(var(--c) 50%,#179DA0 0) 0% calc(100% - var(--_p,0%))/100% 200%,
-    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
-  -webkit-background-clip: text,padding-box;
-          background-clip: text,padding-box;
-  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
-}
-section:hover .section-title {
-  --_p: 100%;
-  --_s: .3s;
+@keyframes review {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
-/* ABOUT START*/
-.paragraph b{
-  color: var(--color-dgreen);
+.review {
+  display: flex;
+  gap: 1.5rem; /* Equivalent to Tailwind's gap-6 */
+  animation: review 40s linear infinite;
 }
-/* ABOUT END */
-
-/* SERICES START */
-
-
-
-
-/* SERVICES END */
-

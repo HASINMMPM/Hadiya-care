@@ -3,8 +3,8 @@ import logo from "../assets/logo.webp"
 
 const Footer = () => {
   return (
-    <footer className="bg-white rounded-lg shadow-sm pt-16">
-      <div className="w-full max-w-screen-xl mx-auto ">
+    <footer className="text-black rounded-lg shadow-sm ">
+      <div className="w-full max-w-screen-xl mx-auto pt-16">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-3 ">
           <a href="#" className="flex flex-col items-start ">
             <img src={logo} className=" h-16 w-16" alt="Hadiya care Logo" />
@@ -125,7 +125,7 @@ const Footer = () => {
           </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto " />
-        <span className="block text-sm text-gray-500 sm:text-center mb-6 ">
+        <span className="block text-sm text-gray-500 sm:text-center pb-2 ">
           © 2025{" "}
           <a href="#" className="hover:underline">
             Hadiya care™
